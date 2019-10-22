@@ -1,0 +1,20 @@
+<html>
+    
+<head>
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1>{{title}}</h1>
+    <form method="POST" action="/results">
+        {% for question in questions %}
+        {{question}}<br />
+        <input type="radio" name="question{{loop.index}}" value="yes"> Yes
+        <input type="radio" name="question{{loop.index}}" value="no"> No
+        <br />
+        {% endfor %}
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
